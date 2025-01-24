@@ -16,6 +16,7 @@ class TestAivenTokenDetector:
             ('foo', False),
             ('AVNS_', False),  # Incomplete token
             ('AVNS12345678', False),  # Missing underscore
+            ('AVNS_UahLjs', False),  # Too short
         ],
     )
     def test_analyze(self, payload, should_flag):

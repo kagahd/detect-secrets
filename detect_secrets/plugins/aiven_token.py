@@ -12,5 +12,5 @@ class AivenTokenDetector(RegexBasedDetector):
 
     denylist = [
         # Aiven tokens follow the pattern: AVNS_<alphanumeric and underscores with a minimum length of 8>
-        re.compile(r'AVNS_[A-Za-z0-9_]{8,}'),
+        re.compile(r'AVNS_[\w]{8,}'),
     ]
